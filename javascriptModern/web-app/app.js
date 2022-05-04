@@ -22,6 +22,7 @@ document
     products.push({
       id: id,
       title: e.target.elements.productTitle.value,
+      price: "",
       exists: true,
     });
     seveProducts(products);

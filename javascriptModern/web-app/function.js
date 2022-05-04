@@ -10,6 +10,13 @@ const seveProducts = function (products) {
   localStorage.setItem("products", JSON.stringify(products));
 };
 
+const removeProduct = (id) => {
+  const productIndex = products.findIndex((item) => item.id === id);
+  if (productIndex > -1) {
+    products.splice(productIndex, 1);
+  }
+};
+
 const renderProducts = function (products, filters) {
   let filterdProducts = products.filter(function (item) {
     return item.title.toLowerCase().includes(filters.searchItem.toLowerCase());
