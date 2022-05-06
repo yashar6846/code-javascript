@@ -22,12 +22,13 @@ document
     products.push({
       id: id,
       title: e.target.elements.productTitle.value,
-      price: "",
+      price: e.target.elements.productPrice.value,
       exists: true,
     });
     seveProducts(products);
     renderProducts(products, filters);
     e.target.elements.productTitle.value = "";
+    e.target.elements.productPrice.value = "";
   });
 
 document

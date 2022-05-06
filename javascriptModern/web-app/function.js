@@ -39,6 +39,7 @@ const createProductDOM = function (product) {
   const checkbox = document.createElement("input");
   const productItem = document.createElement("a");
   const removeButten = document.createElement("button");
+  const productPrice = document.createElement("p");
 
   checkbox.setAttribute("type", "checkbox");
   checkbox.checked = !product.exist;
@@ -53,6 +54,9 @@ const createProductDOM = function (product) {
   productItem.setAttribute("href", `./edit-product.html#${product.id}`);
 
   productEl.appendChild(productItem);
+
+  productPrice.textContent = product.price;
+  productEl.appendChild(productPrice);
 
   removeButten.textContent = "Remove";
   productEl.appendChild(removeButten);
